@@ -1,65 +1,89 @@
 import Image from "next/image";
 
+export const metadata = {
+    title: "Romain Notteau — Développeur Fullstack",
+    description: "Portfolio moderne et éco-responsable de Romain Notteau, développeur Fullstack.",
+};
+
 export default function Home() {
-  return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+    return (
+        <main>
+            {/* Hero */}
+            <section className="hero">
+                <div className="hero-content">
+                    <h1>Romain Notteau</h1>
+                    <p className="tagline">Développeur Fullstack</p>
+                    <p>
+                        Étudiant en 3ème année de BUT Informatique, je me spécialise dans la
+                        conception, le développement et la validation d'applications.
+                        Passionné par la technologie et les solutions logicielles, j'ai
+                        acquis des compétences solides en développement web à travers divers
+                        projets académiques, professionnels et personnels.
+                    </p>
+                    <div className="cta">
+                        <a href="#projets" className="btn primary">Voir mes projets</a>
+                        <a href="#contact" className="btn ghost">Me contacter</a>
+                    </div>
+                </div>
+            </section>
+
+            {/* Projets */}
+            <section id="projets">
+                <h2>Projets sélectionnés</h2>
+                <div className="grid">
+
+                    <article className="card">
+                        <img src="/bomberman.avif" alt="Bomberman" width="400" height="225" loading="lazy"/>
+                        <h3>Bomberman</h3>
+                        <p>Développement d'un jeu vidéo en Java, reprenant les mécaniques classiques du jeu Bomberman.</p>
+                    </article>
+
+                    <article className="card">
+                        <img src="/lensjudge.avif" alt="Lens Judge" width="400" height="225" loading="lazy"/>
+                        <h3>Lens Judge</h3>
+                        <p>Création d'une application d'évaluation automatique pour les compétitions de programmation.</p>
+                    </article>
+
+                    <article className="card">
+                        <img src="/toutou.avif" alt="Toutou en vadrouille" width="400" height="225" loading="lazy"/>
+                        <h3>Toutou en vadrouille</h3>
+                        <p>Conception d'un site web interactif pour partager des carnets de voyage, spécialement dédiés aux aventures avec son chien.</p>
+                    </article>
+
+                </div>
+            </section>
+
+            {/* Compétences */}
+            <section id="competences">
+                <h2>Compétences techniques</h2>
+                <div className="skills-grid">
+                    <span className="skill">HTML</span>
+                    <span className="skill">CSS</span>
+                    <span className="skill">JavaScript</span>
+                    <span className="skill">C#</span>
+                    <span className="skill">Java</span>
+                    <span className="skill">PHP</span>
+                    <span className="skill">Blazor</span>
+                    <span className="skill">React</span>
+                    <span className="skill">ASP.NET Core</span>
+                    <span className="skill">Laravel</span>
+                </div>
+            </section>
+
+            {/* Contact */}
+            <section id="contact">
+                <h2>Contact</h2>
+                <div className="contact-grid">
+                    <a href="mailto:romain.notteau@hotmail.com" className="contact-card">✉️ Email<br/>romain.notteau@hotmail.com</a>
+                    <a href="https://www.linkedin.com/in/romain-notteau/" target="_blank" className="contact-card">💼 LinkedIn<br/>linkedin.com/in/romain-notteau</a>
+                    <a href="https://github.com/RomainNtu/" target="_blank" className="contact-card">🐙 GitHub<br/>github.com/RomainNtu</a>
+                </div>
+            </section>
+
+            {/* Footer */}
+            <footer>
+                <p>© {new Date().getFullYear()} Romain Notteau</p>
+            </footer>
+        </main>
+    );
 }
